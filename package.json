@@ -9,7 +9,7 @@
     "dist"
   ],
   "keywords": [
-    "pancakeswap",
+    "annex",
     "ethereum"
   ],
   "module": "dist/sdk.esm.js",
