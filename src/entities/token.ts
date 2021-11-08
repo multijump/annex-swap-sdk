@@ -70,5 +70,19 @@ export const WETH = {
     18,
     'WBNB',
     'Wrapped BNB'
+  ),
+  [ChainId.CASSINI]: new Token(
+    ChainId.CASSINI,
+    '0x7b99bD319036FAF92C02478f973bAadEdea7a1Aa',
+    18,
+    'WETH',
+    'Wrapped ETH'
+  ),
+  [ChainId.CASSINI]: new Token(
+    ChainId.CASSINI,
+    '',
+    18,
+    'WETH',
+    'Wrapped ETH'
   )
 }
