@@ -1,4 +1,4 @@
-import { BigintIsh, Rounding } from '../../constants';
+import { BigintIsh, Rounding, ChainId } from '../../constants';
 import { Currency } from '../currency';
 import { Route } from '../route';
 import { Fraction } from './fraction';
@@ -13,7 +13,7 @@ export declare class Price extends Fraction {
     get adjusted(): Fraction;
     invert(): Price;
     multiply(other: Price): Price;
-    quote(currencyAmount: CurrencyAmount): CurrencyAmount;
+    quote(currencyAmount: CurrencyAmount, chainId?: ChainId): CurrencyAmount;
     toSignificant(significantDigits?: number, format?: object, rounding?: Rounding): string;
     toFixed(decimalPlaces?: number, format?: object, rounding?: Rounding): string;
 }

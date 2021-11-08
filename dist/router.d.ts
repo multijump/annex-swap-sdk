@@ -1,4 +1,5 @@
 import { Percent, Trade } from './entities';
+import { ChainId } from './constants';
 /**
  * Options for producing the arguments to send call to the router.
  */
@@ -52,5 +53,5 @@ export declare abstract class Router {
      * @param trade to produce call parameters for
      * @param options options for the call parameters
      */
-    static swapCallParameters(trade: Trade, options: TradeOptions): SwapParameters;
+    static swapCallParameters(trade: Trade, options: TradeOptions, chainId?: ChainId): SwapParameters;
 }

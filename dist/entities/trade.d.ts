@@ -1,4 +1,4 @@
-import { TradeType } from '../constants';
+import { ChainId, TradeType } from '../constants';
 import { Currency } from './currency';
 import { CurrencyAmount } from './fractions/currencyAmount';
 import { Percent } from './fractions/percent';
@@ -65,12 +65,12 @@ export declare class Trade {
      * Get the minimum amount that must be received from this trade for the given slippage tolerance
      * @param slippageTolerance tolerance of unfavorable slippage from the execution price of this trade
      */
-    minimumAmountOut(slippageTolerance: Percent): CurrencyAmount;
+    minimumAmountOut(slippageTolerance: Percent, chainId?: ChainId): CurrencyAmount;
     /**
      * Get the maximum amount in that can be spent via this trade for the given slippage tolerance
      * @param slippageTolerance tolerance of unfavorable slippage from the execution price of this trade
      */
-    maximumAmountIn(slippageTolerance: Percent): CurrencyAmount;
+    maximumAmountIn(slippageTolerance: Percent, chainId?: ChainId): CurrencyAmount;
     /**
      * Given a list of pairs, and a fixed amount in, returns the top `maxNumResults` trades that go from an input token
      * amount to an output token, making at most `maxHops` hops.

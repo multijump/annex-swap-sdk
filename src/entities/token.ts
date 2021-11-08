@@ -75,7 +75,7 @@ export const WETH = {
     ChainId.CASSINI,
     '0x7b99bD319036FAF92C02478f973bAadEdea7a1Aa',
     18,
-    'WETH',
-    'Wrapped ETH'
+    'WTCRO',
+    'Wrapped TCRO'
   ),
 }
