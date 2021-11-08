@@ -78,11 +78,4 @@ export const WETH = {
     'WETH',
     'Wrapped ETH'
   ),
-  [ChainId.CASSINI]: new Token(
-    ChainId.CASSINI,
-    '',
-    18,
-    'WETH',
-    'Wrapped ETH'
-  )
 }
