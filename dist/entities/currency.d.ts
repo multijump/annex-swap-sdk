@@ -27,5 +27,6 @@ declare const ETHERS: {
     56: Currency;
     97: Currency;
     339: Currency;
+    25: Currency;
 };
 export { ETHER, ETHERS };

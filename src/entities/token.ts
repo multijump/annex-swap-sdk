@@ -78,4 +78,11 @@ export const WETH = {
     'WCRO',
     'Wrapped CRO'
   ),
+  [ChainId.CRONOS]: new Token(
+    ChainId.CRONOS,
+    '0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23',
+    18,
+    'WCRO',
+    'Wrapped CRO'
+  ),
 }

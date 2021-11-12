@@ -40,5 +40,6 @@ const ETHERS = {
   [ChainId.MAINNET]: Currency.ETHER,
   [ChainId.BSCTESTNET]: Currency.ETHER,
   [ChainId.CASSINI]: Currency.TCRO,
+  [ChainId.CRONOS]: Currency.CRO,
 }
 export { ETHER, ETHERS }
