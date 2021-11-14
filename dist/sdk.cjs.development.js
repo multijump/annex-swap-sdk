@@ -358,21 +358,23 @@ var Currency =
  * @param symbol symbol of the currency
  * @param name of the currency
  */
-function Currency(decimals, symbol, name) {
+function Currency(decimals, symbol, name, chainId) {
   validateSolidityTypeInstance(JSBI.BigInt(decimals), SolidityType.uint8);
   this.decimals = decimals;
   this.symbol = symbol;
   this.name = name;
+  this.chainId = chainId;
 };
 /**
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'BNB', 'Binance');
-Currency.TCRO = /*#__PURE__*/new Currency(18, 'TCRO', 'Cassini');
-Currency.CRO = /*#__PURE__*/new Currency(18, 'CRO', 'Cronos');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'BNB', 'Binance', 56);
+Currency.TBNB = /*#__PURE__*/new Currency(18, 'BNB', 'Binance', 97);
+Currency.TCRO = /*#__PURE__*/new Currency(18, 'TCRO', 'Cassini', 339);
+Currency.CRO = /*#__PURE__*/new Currency(18, 'CRO', 'Cronos', 25);
 var ETHER = Currency.ETHER;
-var ETHERS = (_ETHERS = {}, _ETHERS[exports.ChainId.MAINNET] = Currency.ETHER, _ETHERS[exports.ChainId.BSCTESTNET] = Currency.ETHER, _ETHERS[exports.ChainId.CASSINI] = Currency.TCRO, _ETHERS[exports.ChainId.CRONOS] = Currency.CRO, _ETHERS);
+var ETHERS = (_ETHERS = {}, _ETHERS[exports.ChainId.MAINNET] = Currency.ETHER, _ETHERS[exports.ChainId.BSCTESTNET] = Currency.TBNB, _ETHERS[exports.ChainId.CASSINI] = Currency.TCRO, _ETHERS[exports.ChainId.CRONOS] = Currency.CRO, _ETHERS);
 
 var _WETH;
 /**

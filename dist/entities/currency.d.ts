@@ -8,10 +8,12 @@ export declare class Currency {
     readonly decimals: number;
     readonly symbol?: string;
     readonly name?: string;
+    readonly chainId?: number;
     /**
      * The only instance of the base class `Currency`.
      */
     static readonly ETHER: Currency;
+    static readonly TBNB: Currency;
     static readonly TCRO: Currency;
     static readonly CRO: Currency;
     /**
@@ -20,7 +22,7 @@ export declare class Currency {
      * @param symbol symbol of the currency
      * @param name of the currency
      */
-    protected constructor(decimals: number, symbol?: string, name?: string);
+    protected constructor(decimals: number, symbol?: string, name?: string, chainId?: number);
 }
 declare const ETHER: Currency;
 declare const ETHERS: {
