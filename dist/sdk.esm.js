@@ -19,6 +19,7 @@ var ChainId;
   ChainId[ChainId["BSCTESTNET"] = 97] = "BSCTESTNET";
   ChainId[ChainId["CASSINI"] = 339] = "CASSINI";
   ChainId[ChainId["CRONOS"] = 25] = "CRONOS";
+  ChainId[ChainId["KAVA"] = 2222] = "KAVA";
 })(ChainId || (ChainId = {}));
 
 var TradeType;
@@ -36,8 +37,8 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = (_FACTORY_ADDRESS = {}, _FACTORY_ADDRESS[ChainId.MAINNET] = '0x6100af6980d35FDb119BECE4969fF6b68DA6e4ea', _FACTORY_ADDRESS[ChainId.BSCTESTNET] = '0xd81014579288221814b5E066AaCF0B4A00739a24', _FACTORY_ADDRESS[ChainId.CASSINI] = '0x43c369A3Fea13002e11059855Dc57F3Fe9dA81B7', _FACTORY_ADDRESS[ChainId.CRONOS] = '0x1cc79ECb3a6f9B6d6FaF7298ec6D8667E814d592', _FACTORY_ADDRESS);
-var INIT_CODE_HASH = (_INIT_CODE_HASH = {}, _INIT_CODE_HASH[ChainId.MAINNET] = '0x748c3338a3ac4246245619282e4a44ddbf8d64c31fff15f3fcc0596b76669465', _INIT_CODE_HASH[ChainId.BSCTESTNET] = '0x163dd3668bfee3af10fd857a489c4dd9929f2f02440670f54d71ed57c025f4e8', _INIT_CODE_HASH[ChainId.CASSINI] = '0x370859e0d12eaf24013515aa62dab3edc3947ceb62f71fecb341cc6a123fceb8', _INIT_CODE_HASH[ChainId.CRONOS] = '0x748c3338a3ac4246245619282e4a44ddbf8d64c31fff15f3fcc0596b76669465', _INIT_CODE_HASH);
+var FACTORY_ADDRESS = (_FACTORY_ADDRESS = {}, _FACTORY_ADDRESS[ChainId.MAINNET] = '0x6100af6980d35FDb119BECE4969fF6b68DA6e4ea', _FACTORY_ADDRESS[ChainId.BSCTESTNET] = '0xd81014579288221814b5E066AaCF0B4A00739a24', _FACTORY_ADDRESS[ChainId.CASSINI] = '0x43c369A3Fea13002e11059855Dc57F3Fe9dA81B7', _FACTORY_ADDRESS[ChainId.CRONOS] = '0x1cc79ECb3a6f9B6d6FaF7298ec6D8667E814d592', _FACTORY_ADDRESS[ChainId.KAVA] = '0x1cc79ECb3a6f9B6d6FaF7298ec6D8667E814d592', _FACTORY_ADDRESS);
+var INIT_CODE_HASH = (_INIT_CODE_HASH = {}, _INIT_CODE_HASH[ChainId.MAINNET] = '0x748c3338a3ac4246245619282e4a44ddbf8d64c31fff15f3fcc0596b76669465', _INIT_CODE_HASH[ChainId.BSCTESTNET] = '0x163dd3668bfee3af10fd857a489c4dd9929f2f02440670f54d71ed57c025f4e8', _INIT_CODE_HASH[ChainId.CASSINI] = '0x370859e0d12eaf24013515aa62dab3edc3947ceb62f71fecb341cc6a123fceb8', _INIT_CODE_HASH[ChainId.CRONOS] = '0x748c3338a3ac4246245619282e4a44ddbf8d64c31fff15f3fcc0596b76669465', _INIT_CODE_HASH[ChainId.KAVA] = '0x748c3338a3ac4246245619282e4a44ddbf8d64c31fff15f3fcc0596b76669465', _INIT_CODE_HASH);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -373,8 +374,9 @@ Currency.ETHER = /*#__PURE__*/new Currency(18, 'BNB', 'Binance', 56);
 Currency.TBNB = /*#__PURE__*/new Currency(18, 'BNB', 'Binance', 97);
 Currency.TCRO = /*#__PURE__*/new Currency(18, 'TCRO', 'Cassini', 339);
 Currency.CRO = /*#__PURE__*/new Currency(18, 'CRO', 'Cronos', 25);
+Currency.KAVA = /*#__PURE__*/new Currency(18, 'KAVA', 'Kava', 2222);
 var ETHER = Currency.ETHER;
-var ETHERS = (_ETHERS = {}, _ETHERS[ChainId.MAINNET] = Currency.ETHER, _ETHERS[ChainId.BSCTESTNET] = Currency.TBNB, _ETHERS[ChainId.CASSINI] = Currency.TCRO, _ETHERS[ChainId.CRONOS] = Currency.CRO, _ETHERS);
+var ETHERS = (_ETHERS = {}, _ETHERS[ChainId.MAINNET] = Currency.ETHER, _ETHERS[ChainId.BSCTESTNET] = Currency.TBNB, _ETHERS[ChainId.CASSINI] = Currency.TCRO, _ETHERS[ChainId.CRONOS] = Currency.CRO, _ETHERS[ChainId.KAVA] = Currency.KAVA, _ETHERS);
 
 var _WETH;
 /**
@@ -439,7 +441,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[ChainId.BSCTESTNET] = /*#__PURE__*/new Token(ChainId.BSCTESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH[ChainId.CASSINI] = /*#__PURE__*/new Token(ChainId.CASSINI, '0x7b99bD319036FAF92C02478f973bAadEdea7a1Aa', 18, 'WCRO', 'Wrapped CRO'), _WETH[ChainId.CRONOS] = /*#__PURE__*/new Token(ChainId.CRONOS, '0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23', 18, 'WCRO', 'Wrapped CRO'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[ChainId.BSCTESTNET] = /*#__PURE__*/new Token(ChainId.BSCTESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH[ChainId.CASSINI] = /*#__PURE__*/new Token(ChainId.CASSINI, '0x7b99bD319036FAF92C02478f973bAadEdea7a1Aa', 18, 'WCRO', 'Wrapped CRO'), _WETH[ChainId.CRONOS] = /*#__PURE__*/new Token(ChainId.CRONOS, '0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23', 18, 'WCRO', 'Wrapped CRO'), _WETH[ChainId.KAVA] = /*#__PURE__*/new Token(ChainId.KAVA, '0xc86c7C0eFbd6A49B35E8714C5f59D99De09A225b', 18, 'WKAVA', 'Wrapped KAVA'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);

@@ -4,7 +4,8 @@ export declare enum ChainId {
     MAINNET = 56,
     BSCTESTNET = 97,
     CASSINI = 339,
-    CRONOS = 25
+    CRONOS = 25,
+    KAVA = 2222
 }
 export declare enum TradeType {
     EXACT_INPUT = 0,
@@ -20,12 +21,14 @@ export declare const FACTORY_ADDRESS: {
     97: string;
     339: string;
     25: string;
+    2222: string;
 };
 export declare const INIT_CODE_HASH: {
     56: string;
     97: string;
     339: string;
     25: string;
+    2222: string;
 };
 export declare const MINIMUM_LIQUIDITY: JSBI;
 export declare const ZERO: JSBI;

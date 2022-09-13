@@ -21,6 +21,7 @@ export class Currency {
   public static readonly TBNB: Currency = new Currency(18, 'BNB', 'Binance', 97)
   public static readonly TCRO: Currency = new Currency(18, 'TCRO', 'Cassini', 339)
   public static readonly CRO: Currency = new Currency(18, 'CRO', 'Cronos', 25)
+  public static readonly KAVA: Currency = new Currency(18, 'KAVA', 'Kava', 2222)
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -44,5 +45,6 @@ const ETHERS = {
   [ChainId.BSCTESTNET]: Currency.TBNB,
   [ChainId.CASSINI]: Currency.TCRO,
   [ChainId.CRONOS]: Currency.CRO,
+  [ChainId.KAVA]: Currency.KAVA,
 }
 export { ETHER, ETHERS }

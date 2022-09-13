@@ -16,6 +16,7 @@ export declare class Currency {
     static readonly TBNB: Currency;
     static readonly TCRO: Currency;
     static readonly CRO: Currency;
+    static readonly KAVA: Currency;
     /**
      * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
      * @param decimals decimals of the currency
@@ -30,5 +31,6 @@ declare const ETHERS: {
     97: Currency;
     339: Currency;
     25: Currency;
+    2222: Currency;
 };
 export { ETHER, ETHERS };

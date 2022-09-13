@@ -85,4 +85,11 @@ export const WETH = {
     'WCRO',
     'Wrapped CRO'
   ),
+  [ChainId.KAVA]: new Token(
+    ChainId.KAVA,
+    '0xc86c7C0eFbd6A49B35E8714C5f59D99De09A225b',
+    18,
+    'WKAVA',
+    'Wrapped KAVA'
+  ),
 }
