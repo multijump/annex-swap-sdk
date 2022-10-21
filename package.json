@@ -10,7 +10,10 @@
   ],
   "keywords": [
     "annex",
-    "ethereum"
+    "ethereum",
+    "bsc",
+    "cronos",
+    "kava"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {

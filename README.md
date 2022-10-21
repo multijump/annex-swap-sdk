@@ -1,4 +1,5 @@
 # Annex SDK
+Support annex lending sdk in BSC, Cronos and KAVA chains
 
 ## Running tests
 
